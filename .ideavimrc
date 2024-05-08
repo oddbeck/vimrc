@@ -1,0 +1,55 @@
+Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-easymotion'
+Plug 'justinmk/vim-sneak'
+Plug 'liuchengxu/vim-which-key'
+
+set which-key
+set easymotion
+set number
+set relativenumber
+""" USE THE COMMAND :actionlist to get a list of all actions
+""" Map leader to space ---------------------
+let mapleader=" "
+let mapleader = " "
+nmap <space> <Leader>
+
+nnoremap <leader>wl :vsplit<CR>
+nnoremap <leader>wj :split<CR>
+nnoremap <C-w><C-q> :q<cr>
+""" inoremap k<leader> <Esc>
+nnoremap <leader>tt :action ToggleLineBreakpoint<cr>
+vnoremap <leader>kk :action CommentByBlockComment<cr>
+vnoremap <C-k><C-k> :action CommentByBlockComment<cr>
+inoremap <C-k><C-j> <Esc>
+nnoremap <C-q><C-q> :q<cr>
+nnoremap <leader>sa :action wal<cr>
+nnoremap <leader>sa :action wal<cr>
+
+nnoremap <leader>ca :action CodeActions<cr>
+"vnoremap <C-k><C-k> :action CommentByBlockComment<cr>
+" map <C-K><C-I> :action com.intellij.lang.actions.ToggleLineComment<CR>
+
+nmap gI :action GotoImplementation<CR>
+nmap gi :action GotoImplementation<CR>
+nmap gb :action GoBack<CR>
+
+set surround
+
+""" Mappings --------------------------------
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <S-Space> <Action>(GotoNextError)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+
