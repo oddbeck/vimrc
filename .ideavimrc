@@ -32,7 +32,7 @@ nnoremap <leader>ca :action CodeActions<cr>
 
 nmap gI :action GotoImplementation<CR>
 nmap gi :action GotoImplementation<CR>
-nmap gb :action GoBack<CR>
+nmap gb :action Back<CR>
 
 set surround
 
